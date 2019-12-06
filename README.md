@@ -1,10 +1,10 @@
-#### Guide d'auto-formation pour administrateur systeme Linux ###
-1)Créer une VM qui fournit les services dhcp (dhcp) et dns(bind ou autre).COnfigurer le demon dhcp pour utiliser un autre serveur comme pxeboot.
+### Guide d'auto-formation pour administrateur systeme Linux ##
+1) Créer une VM qui fournit les services dhcp (dhcp) et dns(bind ou autre).COnfigurer le demon dhcp pour utiliser un autre serveur comme pxeboot.
 Assurez vous que chaque zone a une zone reverse associée. 
 Utilisez quelque chose comme "internal.virtnet" (pas ".local")
 comme zone interne DNS.
 
-2)Configurer OpenSSH sur le serveur 
+2) Configurer OpenSSH sur le serveur 
 
 3) Utilisez cobbler pour déployer deux autres serveurs
 qui feront office de serveurs master/master LDAP.
@@ -19,7 +19,7 @@ L'un (postgresql) est installé manuellement et l'autre avec un playbook ansible
 
 7) Créer un cluster PostgreSQL (HaProxy/Keepalived) et tester la réplication 
 
-8)Configurer un Puppet Master.
+8) Configurer un Puppet Master.
  Utiliser ansible pour le deployment
 
 9) Deployer une autre VM. Installer bacula sur lui,en utilisant le postgresql cluster pour stocker la base de données.Stocker le contenu des autres machines sur le serveur
@@ -36,7 +36,7 @@ L'un (postgresql) est installé manuellement et l'autre avec un playbook ansible
 
 14) Deployer une autre VM. Sur cette VM installer ELK
 
-15)Deployer une autre VM. Sur cette VM, configurer un demon syslog qui écoute les input des autres serveurs. Reconfigurer les autres serveurs pour envoyer leurs logs à syslog et utiliser Kibana pour analyser ses logs.
+15) Deployer une autre VM. Sur cette VM, configurer un demon syslog qui écoute les input des autres serveurs. Reconfigurer les autres serveurs pour envoyer leurs logs à syslog et utiliser Kibana pour analyser ses logs.
 
 
-15) Maintenant créeons des Manifests Puppet Manifests pour s'assurer que toutes les machines sont authentifiés au serveur LDAP et sauvegardés avec bacula server.
+16) Maintenant créeons des Manifests Puppet Manifests pour s'assurer que toutes les machines sont authentifiés au serveur LDAP et sauvegardés avec bacula server.
