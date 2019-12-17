@@ -1,5 +1,5 @@
 ### Guide d'auto-formation pour administrateur systeme Linux ##
-1) Créer une VM qui fournit les services dhcp (dhcp) et dns(bind ou autre).COnfigurer le demon dhcp pour utiliser un autre serveur comme pxeboot.
+1) Créer une VM qui fournit les services dhcp (dhcp) et dns(bind ou autre).Configurer le demon dhcp pour utiliser un autre serveur comme pxeboot.
 Assurez vous que chaque zone a une zone reverse associée. 
 Utilisez quelque chose comme "internal.virtnet" (pas ".local")
 comme zone interne DNS.
